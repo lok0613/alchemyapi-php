@@ -49,6 +49,10 @@ class AlchemyApi
 	 */
 	public function __call($fnName, array $arguments)
 	{
+		if (!is_array($arguments[1])) {
+			throw new \Exception($fnName . ' argument 2 must be array.');
+		}
+
 		$params = array_merge([
 			'outputMode' => 'json',
 			'apikey' => $this->apiKey,
@@ -58,6 +62,6 @@ class AlchemyApi
 
 		$url = $this->baseUrl . $middle . ucfirst($fnName) . '?' . urldecode(http_build_query($params));
 		$res = $this->client->request('POST', $url);
-		return (string)$res->getBody();
+		return json_decode((string)$res->getBody(), true);
 	}
 }

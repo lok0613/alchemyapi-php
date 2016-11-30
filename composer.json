@@ -1,0 +1,19 @@
+{
+    "name": "lok0613/alchemyapi",
+    "description": "AlchempyApi PHP Wrapper",
+    "authors": [
+        {
+            "name": "Lok Chun Wai",
+            "email": "lokcentral0613@gmail.com"
+        }
+    ],
+    "require": {
+    	"php": "^5.3.3 || ^7.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lok0613\\AlchemyApi\\": "src/"
+        }
+    }
+}

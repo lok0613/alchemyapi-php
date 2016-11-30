@@ -1,6 +1,9 @@
 {
     "name": "lok0613/alchemyapi",
     "description": "AlchempyApi PHP Wrapper",
+    "type": "library",
+    "keywords": ["alchemy", "alchemyapi", "alchemy api", "bluemix", "ibm"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Lok Chun Wai",
